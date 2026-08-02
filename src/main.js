@@ -8,7 +8,7 @@ let page = 1;
 let searchQuery = '';
 const perPage = 15;
 
-const loadMore = document.querySelector('.ja-load-more');
+const loadMore = document.querySelector('.js-load-more');
 loadMore.addEventListener('click', onLoadMore);
 
 hideLoader();

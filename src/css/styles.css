@@ -109,10 +109,8 @@ div.sl-wrapper .sl-image .sl-caption {
   top: 100%;
   bottom: auto;
 }
-.load-more-hidden {
-  display: none;
-}
-.load-more {
+
+.js-load-more {
   display: block;
   outline: none;
   border: none;
@@ -126,6 +124,9 @@ div.sl-wrapper .sl-image .sl-caption {
   padding: 8px 16px;
   text-align: center;
   margin: 0 auto 44px auto;
+}
+.load-more-hidden {
+  display: none;
 }
 .load-more:hover {
   background: #6c8cff;
