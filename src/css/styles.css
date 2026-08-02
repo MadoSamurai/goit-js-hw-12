@@ -109,6 +109,27 @@ div.sl-wrapper .sl-image .sl-caption {
   top: 100%;
   bottom: auto;
 }
+.load-more-hidden {
+  display: none;
+}
+.load-more {
+  display: block;
+  outline: none;
+  border: none;
+  background: #4e75ff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 8px 16px;
+  text-align: center;
+  margin: 0 auto 44px auto;
+}
+.load-more:hover {
+  background: #6c8cff;
+}
 @media only screen and (min-width: 768px) {
   .gallery-item {
     width: calc((100% - 24px * 1) / 2);

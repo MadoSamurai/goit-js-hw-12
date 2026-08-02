@@ -28,8 +28,10 @@ export function createGallery(images) {
                 </li>
                 `
         ).join(" ");
+ 
+    gallery.insertAdjacentHTML('beforeend', markup);
     
-    gallery.innerHTML = markup;
+    
     lightbox.refresh();
 };
 
@@ -44,3 +46,4 @@ export function showLoader() {
 export function hideLoader() {
   loader.classList.add('hidden');
 };
+
