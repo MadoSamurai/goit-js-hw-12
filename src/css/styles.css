@@ -1,0 +1,133 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./font-style.css');
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./loader.css');
+
+* {
+  box-sizing: border-box;
+}
+.form {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+.form input {
+  outline: none;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding: 0 16px;
+}
+.form label {
+  display: inline-block;
+}
+.form input:hover {
+  border-color: #000;
+}
+.form input:focus {
+  border-color: #4e75ff;
+}
+.form button {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
+  width: 272px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-top: 5px;
+}
+.form button:hover {
+  background: #6c8cff;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px 0;
+}
+.gallery-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 360px;
+  border: 1px solid #808080;
+}
+
+.info-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background: #fff;
+  padding: 4px 0;
+}
+.info-item {
+  text-align: center;
+}
+.info-item h3 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.info-item p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+div.sl-wrapper .sl-image .sl-caption {
+  top: 100%;
+  bottom: auto;
+}
+@media only screen and (min-width: 768px) {
+  .gallery-item {
+    width: calc((100% - 24px * 1) / 2);
+  }
+  div.sl-wrapper .sl-image .sl-caption {
+    top: auto;
+    bottom: 0;
+  }
+  .form {
+    flex-direction: row;
+  }
+  .form button {
+    width: 91px;
+    margin-top: 0;
+    margin-left: 8px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gallery-item {
+    width: calc((100% - 24px * 2) / 3);
+  }
+}
