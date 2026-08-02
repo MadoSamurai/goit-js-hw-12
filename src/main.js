@@ -15,7 +15,7 @@ const searchForm = document.querySelector('.form');
 
 searchForm.addEventListener('submit', handlerSearch);
 
-// ИСПРАВЛЕНО: Переписали внутренности на чистый async/await вместо .then()
+
 async function handlerSearch(event) {
     event.preventDefault();
 
@@ -38,7 +38,7 @@ async function handlerSearch(event) {
     showLoader();
 
     try {
-        // Делаем асинхронный запрос через await
+        
         const data = await getImagesByQuery(searchQuery, page);
 
         if (data.hits.length === 0) {
@@ -51,7 +51,7 @@ async function handlerSearch(event) {
 
         createGallery(data.hits);
 
-        // Если картинок пришло ровно 15, значит, потенциально есть ещё страницы
+        
         if (data.hits.length === 15) {
             loadMore.classList.replace("load-more-hidden", "load-more");
         }
@@ -78,7 +78,7 @@ async function onLoadMore() {
         const data = await getImagesByQuery(searchQuery, page);
         createGallery(data.hits);
 
-        // Если пришло меньше 15 картинок, значит, коллекция закончилась
+        
         if (data.hits.length < 15) {
             iziToast.info({
                 message: "We're sorry, but you've reached the end of search results.",
